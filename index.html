@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ESTUDO DE CASO GOOGLE LENS X MOBILENET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body background="fundo.webp">
+    <ol>
+        <div class="test_image_and_resut col-xs-12">
+
+            <li class="col-sm-4 col-xs-12">
+                <h3>Imagem Teste 1: Garrafa</h3>
+                <img src="garrafa.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                Resultado no <b>Google Lens</b>:
+                <span>Garrafa</span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                Resultado no <b>Mobile Net</b>:
+                <span>Luz</span>
+            </h5>
+            
+            <div class="mini_result" class="col-xs-12">
+            <h4 class="btn btn-success">Resultado: Google Lens é mais preciso!</h4>
+            <hr>
+            <h4></h4>
+            </div>
+        
+        <div class="test_image_and_resut col-xs-12">
+
+            <li class="col-sm-4 col-xs-12">
+                <h3>Imagem Teste 2: Dicionário</h3>
+                <img src="livro.jpg" class="img-responsive">
+            </li>
+
+            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                Resultado no <b>Google Lens</b>:
+                <span>Dicionário</span>
+            </h5>
+
+            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                Resultado no <b>Mobile Net</b>:
+                <span>Livro</span>
+            </h5>
+            
+            <div class="mini_result" class="col-xs-12">
+            <h4 class="btn btn-success">Resultado: Isso foi um empate!</h4>
+            <hr>
+            <h4></h4>
+            </div>
+
+            <div class="test_image_and_resut col-xs-12">
+
+                <li class="col-sm-4 col-xs-12">
+                    <h3>Imagem Teste 3: Insulina NPH</h3>
+                    <img src="insulina.jpg" class="img-responsive">
+                </li>
+    
+                <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                    Resultado no <b>Google Lens</b>:
+                    <span>Insulina NPH</span>
+                </h5>
+    
+                <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                    Resultado no <b>Mobile Net</b>:
+                    <span>Seringa</span>
+                </h5>
+                
+                <div class="mini_result" class="col-xs-12">
+                <h4 class="btn btn-success">Resultado: Ee considero isso um empate!</h4>
+                <hr>
+                <h4></h4>
+                </div>
+                
+                <div class="test_image_and_resut col-xs-12">
+
+                    <li class="col-sm-4 col-xs-12">
+                        <h3>Imagem Teste 4: Repolho</h3>
+                        <img src="repolho.jpg" class="img-responsive">
+                    </li>
+        
+                    <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                        Resultado no <b>Google Lens</b>:
+                        <span>Repolho</span>
+                    </h5>
+        
+                    <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                        Resultado no <b>Mobile Net</b>!
+                        <span></span>
+                    </h5>
+                    
+                    <div class="mini_result" class="col-xs-12">
+                    <h4 class="btn btn-success">Resultado:</h4>
+                    <hr>
+                    <h4></h4>
+                    </div>  
+                    
+                    <div class="test_image_and_resut col-xs-12">
+
+                        <li class="col-sm-4 col-xs-12">
+                            <h3>Imagem Teste 5: Laranja</h3>
+                            <img src="laranja.jpg" class="img-responsive">
+                        </li>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Google Lens</b>:
+                            <span>Limão Siciliano</span>
+                        </h5>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Mobile Net</b>!
+                            <span></span>
+                        </h5>
+                        
+                        <div class="mini_result" class="col-xs-12">
+                        <h4 class="btn btn-success">Resultado:</h4>
+                        <hr>
+                        <h4></h4>
+                        </div>
+
+                    <div class="test_image_and_resut col-xs-12">
+
+                        <li class="col-sm-4 col-xs-12">
+                            <h3>Imagem Teste 6: Orquídea</h3>
+                            <img src="flores.jpg" class="img-responsive">
+                        </li>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Google Lens</b>:
+                            <span>Orquídea</span>
+                        </h5>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Mobile Net</b>:
+                            <span>Arco</span>
+                        </h5>
+                        
+                        <div class="mini_result" class="col-xs-12">
+                        <h4 class="btn btn-success">Resultado: Google Lens é mais preciso!</h4>
+                        <hr>
+                        <h4></h4>
+                        </div>
+
+                    <div class="test_image_and_resut col-xs-12">
+
+                        <li class="col-sm-4 col-xs-12">
+                            <h3>Imagem Teste 7: Pente</h3>
+                            <img src="pente.jpg" class="img-responsive">
+                        </li>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Google Lens</b>:
+                            <span>Pente</span>
+                        </h5>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Mobile Net</b>:
+                            <span>Televisão</span>
+                        </h5>
+                        
+                        <div class="mini_result" class="col-xs-12">
+                        <h4 class="btn btn-success">Resultado: Goggle Lens é mais preciso!</h4>
+                        <hr>
+                        </div>
+
+                    <div class="test_image_and_resut col-xs-12">
+
+                        <li class="col-sm-4 col-xs-12">
+                            <h3>Imagem Teste 8: Cesta</h3>
+                            <img src="cesta.jpg" class="img-responsive">
+                        </li>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Google Lens</b>:
+                            <span>Cesta</span>
+                        </h5>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Mobile Net</b>!
+                            <span>Cesta de Supermercado</span>
+                        </h5>
+                        
+                        <div class="mini_result" class="col-xs-12">
+                        <h4 class="btn btn-success">Resultado: Eu considero isso um empate!</h4>
+                        <hr>
+                        <h4></h4>
+                        </div>
+
+                    <div class="test_image_and_resut col-xs-12">
+
+                        <li class="col-sm-4 col-xs-12">
+                            <h3>Imagem Teste 9: Capacete</h3>
+                            <img src="capacete.jpg" class="img-responsive">
+                        </li>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Google Lens</b>:
+                            <span>Capacete</span>
+                        </h5>
+            
+                        <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                            Resultado no <b>Mobile Net</b>!
+                            <span></span>
+                        </h5>
+                        
+                        <div class="mini_result" class="col-xs-12">
+                        <h4 class="btn btn-success">Resultado:</h4>
+                        <hr>
+                        <h4></h4>
+                        </div>
+
+                        <div class="test_image_and_resut col-xs-12">
+
+                            <li class="col-sm-4 col-xs-12">
+                                <h3 class="heading">Imagem Teste 10: Copo</h3>
+                                <img src="copo.jpg" class="img-responsive">
+                            </li>
+                
+                            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                                Resultado no <b>Google Lens</b>:
+                                <span>Copo</span>
+                            </h5>
+                
+                            <h5 class="col-sm-4 col-xs-12 btn btn-info">
+                                Resultado no <b>Mobile Net</b>:
+                                <span>Microfone</span>
+                            </h5>
+                            
+                            <div class="mini_result" class="col-xs-12">
+                            <h4 class="btn btn-success">Resultado: Goggle Lens é mais preciso!</h4>
+                            <hr>
+                            <h4></h4>
+                            </div>
+    </ol>
+    <div class="conclusao">
+        Testei 10 imagens. Como podemos ver o Google Lens é bem mais preciso do que o MobileNet! <br>
+        Nota: Infelizmente não pude fazer o reconhecimento de 3 objetos no MobileNet, desculpe!
+    </div> 
+</body>
+</html>
